@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\HocTap\FPGA\Test\test9\simulation\qsim
+vwrapper_9
+Z1 !s100 81VWB>JOVS9]0cKCP2k0L1
+Z2 In`^LlQSKT>>ni5U:bK^RT3
+Z3 VNoHXNk?V5PAW?m?NNG<oG3
+Z4 dD:\HocTap\FPGA\Test\test9\simulation\qsim
+Z5 w1681750012
+Z6 8wrapper_9.vo
+Z7 Fwrapper_9.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|wrapper_9.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1681750013.288000
+Z12 !s107 wrapper_9.vo|
+!s101 -O0
+vwrapper_9_vlg_check_tst
+!i10b 1
+Z13 !s100 :c]:H_d=KH5ig<LTcW:Ma3
+Z14 I:]fU[NQCk_0jZj4fgFWEX0
+Z15 VI9?500FT[i7PbTSN7kzJb2
+R4
+Z16 w1681750011
+Z17 8wrapper_9.vt
+Z18 Fwrapper_9.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z19 !s108 1681750013.441000
+Z20 !s107 wrapper_9.vt|
+Z21 !s90 -work|work|wrapper_9.vt|
+!s101 -O0
+R10
+vwrapper_9_vlg_sample_tst
+!i10b 1
+Z22 !s100 L@OZ?19b8=MPWUGOAXPl=0
+Z23 IILdMFaUAJ=9mDI<X8g^7E3
+Z24 Ve5KCzN_71h;`S]<1?<hok2
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vwrapper_9_vlg_vec_tst
+!i10b 1
+!s100 WDQ`GGV==]9zT`DUPi7Mc3
+IdkaXEAk8Xc3F0^:RUI_a:3
+Z25 VGB=FokkS<E_NW]KjTAQbZ2
+R4
+R16
+R17
+R18
+Z26 L0 423
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

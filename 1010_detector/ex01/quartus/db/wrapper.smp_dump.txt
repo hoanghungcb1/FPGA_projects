@@ -1,0 +1,8 @@
+
+State Machine - |wrapper|design_4:dut|y
+Name y.S3 y.S2 y.S1 y.S0 y.S4 
+y.S0 0 0 0 0 0 
+y.S1 0 0 1 1 0 
+y.S2 0 1 0 1 0 
+y.S3 1 0 0 1 0 
+y.S4 0 0 0 1 1 

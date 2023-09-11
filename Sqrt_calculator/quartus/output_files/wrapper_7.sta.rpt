@@ -1,0 +1,1664 @@
+TimeQuest Timing Analyzer report for wrapper_7
+Wed Apr 19 10:31:33 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLOCK_50'
+ 12. Slow Model Hold: 'CLOCK_50'
+ 13. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 14. Slow Model Minimum Pulse Width: 'KEY[0]'
+ 15. Slow Model Minimum Pulse Width: 'KEY[1]'
+ 16. Setup Times
+ 17. Hold Times
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'CLOCK_50'
+ 26. Fast Model Hold: 'CLOCK_50'
+ 27. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 28. Fast Model Minimum Pulse Width: 'KEY[0]'
+ 29. Fast Model Minimum Pulse Width: 'KEY[1]'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths
+ 44. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; wrapper_7                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; CLOCK_50   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 } ;
+; KEY[0]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[0] }   ;
+; KEY[1]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[1] }   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 99.39 MHz ; 99.39 MHz       ; CLOCK_50   ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------+
+; Slow Model Setup Summary            ;
++----------+----------+---------------+
+; Clock    ; Slack    ; End Point TNS ;
++----------+----------+---------------+
+; CLOCK_50 ; -164.548 ; -6420.827     ;
++----------+----------+---------------+
+
+
++----------------------------------+
+; Slow Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.391 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; -1.380 ; -123.380           ;
+; KEY[0]   ; -1.222 ; -1.222             ;
+; KEY[1]   ; -1.222 ; -1.222             ;
++----------+--------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_50'                                                                                                            ;
++----------+--------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack    ; From Node          ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++----------+--------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -164.548 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.242     ; 164.342    ;
+; -164.154 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.242     ; 163.948    ;
+; -164.150 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.242     ; 163.944    ;
+; -164.131 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.812     ; 164.355    ;
+; -164.050 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.249     ; 163.837    ;
+; -164.009 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.092     ; 163.953    ;
+; -163.980 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.113     ; 163.903    ;
+; -163.817 ; design_7:dut|A[7]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.808     ; 164.045    ;
+; -163.737 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.812     ; 163.961    ;
+; -163.733 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.812     ; 163.957    ;
+; -163.714 ; design_7:dut|A[10] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.024     ; 163.726    ;
+; -163.633 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.819     ; 163.850    ;
+; -163.615 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.092     ; 163.559    ;
+; -163.611 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.092     ; 163.555    ;
+; -163.586 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.113     ; 163.509    ;
+; -163.582 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.113     ; 163.505    ;
+; -163.538 ; design_7:dut|A[9]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.172     ; 163.402    ;
+; -163.535 ; design_7:dut|A[2]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.052     ; 163.519    ;
+; -163.511 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.099     ; 163.448    ;
+; -163.482 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.120     ; 163.398    ;
+; -163.478 ; design_7:dut|A[3]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.945     ; 163.569    ;
+; -163.460 ; design_7:dut|A[8]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.024     ; 163.472    ;
+; -163.423 ; design_7:dut|A[7]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.808     ; 163.651    ;
+; -163.419 ; design_7:dut|A[7]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.808     ; 163.647    ;
+; -163.374 ; design_7:dut|A[13] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.211     ; 163.199    ;
+; -163.369 ; design_7:dut|A[4]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.818     ; 163.587    ;
+; -163.320 ; design_7:dut|A[10] ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.024     ; 163.332    ;
+; -163.319 ; design_7:dut|A[7]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.815     ; 163.540    ;
+; -163.316 ; design_7:dut|A[10] ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.024     ; 163.328    ;
+; -163.301 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.257     ; 163.080    ;
+; -163.285 ; design_7:dut|A[11] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.974     ; 163.347    ;
+; -163.216 ; design_7:dut|A[10] ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.031     ; 163.221    ;
+; -163.144 ; design_7:dut|A[9]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.172     ; 163.008    ;
+; -163.141 ; design_7:dut|A[2]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.052     ; 163.125    ;
+; -163.140 ; design_7:dut|A[9]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.172     ; 163.004    ;
+; -163.137 ; design_7:dut|A[2]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.052     ; 163.121    ;
+; -163.084 ; design_7:dut|A[3]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.945     ; 163.175    ;
+; -163.080 ; design_7:dut|A[3]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.945     ; 163.171    ;
+; -163.075 ; design_7:dut|A[15] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.210     ; 162.901    ;
+; -163.070 ; design_7:dut|A[14] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.204     ; 162.902    ;
+; -163.066 ; design_7:dut|A[12] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.205     ; 162.897    ;
+; -163.066 ; design_7:dut|A[8]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.024     ; 163.078    ;
+; -163.062 ; design_7:dut|A[8]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.024     ; 163.074    ;
+; -163.040 ; design_7:dut|A[9]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.179     ; 162.897    ;
+; -163.037 ; design_7:dut|A[2]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.059     ; 163.014    ;
+; -162.993 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.257     ; 162.772    ;
+; -162.980 ; design_7:dut|A[3]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.952     ; 163.064    ;
+; -162.980 ; design_7:dut|A[13] ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.211     ; 162.805    ;
+; -162.976 ; design_7:dut|A[13] ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.211     ; 162.801    ;
+; -162.975 ; design_7:dut|A[4]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.818     ; 163.193    ;
+; -162.971 ; design_7:dut|A[4]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.818     ; 163.189    ;
+; -162.962 ; design_7:dut|A[8]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.031     ; 162.967    ;
+; -162.891 ; design_7:dut|A[11] ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.974     ; 162.953    ;
+; -162.887 ; design_7:dut|A[11] ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.974     ; 162.949    ;
+; -162.884 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.827     ; 163.093    ;
+; -162.876 ; design_7:dut|A[13] ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.218     ; 162.694    ;
+; -162.871 ; design_7:dut|A[4]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.825     ; 163.082    ;
+; -162.787 ; design_7:dut|A[11] ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.981     ; 162.842    ;
+; -162.762 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.107     ; 162.691    ;
+; -162.733 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.128     ; 162.641    ;
+; -162.681 ; design_7:dut|A[15] ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.210     ; 162.507    ;
+; -162.677 ; design_7:dut|A[15] ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.210     ; 162.503    ;
+; -162.676 ; design_7:dut|A[14] ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.204     ; 162.508    ;
+; -162.672 ; design_7:dut|A[12] ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.205     ; 162.503    ;
+; -162.672 ; design_7:dut|A[14] ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.204     ; 162.504    ;
+; -162.668 ; design_7:dut|A[12] ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.205     ; 162.499    ;
+; -162.618 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][2] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.243     ; 162.411    ;
+; -162.577 ; design_7:dut|A[15] ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.217     ; 162.396    ;
+; -162.576 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.827     ; 162.785    ;
+; -162.572 ; design_7:dut|A[14] ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.211     ; 162.397    ;
+; -162.570 ; design_7:dut|A[7]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.823     ; 162.783    ;
+; -162.568 ; design_7:dut|A[12] ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.212     ; 162.392    ;
+; -162.467 ; design_7:dut|A[10] ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.039     ; 162.464    ;
+; -162.454 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.107     ; 162.383    ;
+; -162.425 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.128     ; 162.333    ;
+; -162.407 ; design_7:dut|B[0]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.135      ; 163.578    ;
+; -162.348 ; design_7:dut|B[5]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.128      ; 163.512    ;
+; -162.328 ; design_7:dut|B[1]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.016      ; 163.380    ;
+; -162.291 ; design_7:dut|A[9]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.187     ; 162.140    ;
+; -162.288 ; design_7:dut|A[2]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.067     ; 162.257    ;
+; -162.267 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[30][0] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.257     ; 162.046    ;
+; -162.266 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[30][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.257     ; 162.045    ;
+; -162.262 ; design_7:dut|A[7]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.823     ; 162.475    ;
+; -162.231 ; design_7:dut|A[3]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.960     ; 162.307    ;
+; -162.213 ; design_7:dut|A[8]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.039     ; 162.210    ;
+; -162.201 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][2] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.813     ; 162.424    ;
+; -162.159 ; design_7:dut|A[10] ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.039     ; 162.156    ;
+; -162.127 ; design_7:dut|A[13] ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.226     ; 161.937    ;
+; -162.122 ; design_7:dut|A[4]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.833     ; 162.325    ;
+; -162.115 ; design_7:dut|B[2]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.126      ; 163.277    ;
+; -162.079 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][2] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.093     ; 162.022    ;
+; -162.050 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][2] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.114     ; 161.972    ;
+; -162.048 ; design_7:dut|B[6]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.126      ; 163.210    ;
+; -162.040 ; design_7:dut|B[8]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[1]       ; CLOCK_50    ; 1.000        ; -0.005     ; 163.071    ;
+; -162.038 ; design_7:dut|A[11] ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.989     ; 162.085    ;
+; -162.018 ; design_7:dut|B[10] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[1]       ; CLOCK_50    ; 1.000        ; -0.004     ; 163.050    ;
+; -162.013 ; design_7:dut|B[0]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.135      ; 163.184    ;
+; -162.009 ; design_7:dut|B[0]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.135      ; 163.180    ;
+; -161.986 ; design_7:dut|B[4]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.161      ; 163.183    ;
+; -161.983 ; design_7:dut|A[9]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -1.187     ; 161.832    ;
++----------+--------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_50'                                                                                                                 ;
++-------+----------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                  ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; design_7:dut|LCD:LCD|lcd_e ; design_7:dut|LCD:LCD|lcd_e       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.514 ; design_7:dut|LCD:LCD|j[31] ; design_7:dut|LCD:LCD|j[31]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.780      ;
+; 0.531 ; design_7:dut|LCD:LCD|i[31] ; design_7:dut|LCD:LCD|i[31]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.797      ;
+; 0.795 ; design_7:dut|LCD:LCD|i[0]  ; design_7:dut|LCD:LCD|i[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.061      ;
+; 0.802 ; design_7:dut|LCD:LCD|i[4]  ; design_7:dut|LCD:LCD|i[4]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; design_7:dut|LCD:LCD|i[20] ; design_7:dut|LCD:LCD|i[20]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; design_7:dut|LCD:LCD|i[7]  ; design_7:dut|LCD:LCD|i[7]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.068      ;
+; 0.803 ; design_7:dut|LCD:LCD|i[16] ; design_7:dut|LCD:LCD|i[16]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.069      ;
+; 0.805 ; design_7:dut|LCD:LCD|i[1]  ; design_7:dut|LCD:LCD|i[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806 ; design_7:dut|LCD:LCD|i[9]  ; design_7:dut|LCD:LCD|i[9]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; design_7:dut|LCD:LCD|i[11] ; design_7:dut|LCD:LCD|i[11]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; design_7:dut|LCD:LCD|i[13] ; design_7:dut|LCD:LCD|i[13]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; design_7:dut|LCD:LCD|i[14] ; design_7:dut|LCD:LCD|i[14]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; design_7:dut|LCD:LCD|i[25] ; design_7:dut|LCD:LCD|i[25]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; design_7:dut|LCD:LCD|i[27] ; design_7:dut|LCD:LCD|i[27]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; design_7:dut|LCD:LCD|i[29] ; design_7:dut|LCD:LCD|i[29]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; design_7:dut|LCD:LCD|i[30] ; design_7:dut|LCD:LCD|i[30]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.809 ; design_7:dut|LCD:LCD|i[18] ; design_7:dut|LCD:LCD|i[18]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.075      ;
+; 0.813 ; design_7:dut|LCD:LCD|i[17] ; design_7:dut|LCD:LCD|i[17]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.079      ;
+; 0.814 ; design_7:dut|LCD:LCD|i[15] ; design_7:dut|LCD:LCD|i[15]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.080      ;
+; 0.828 ; design_7:dut|LCD:LCD|i[19] ; design_7:dut|LCD:LCD|i[19]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.094      ;
+; 0.835 ; design_7:dut|LCD:LCD|i[26] ; design_7:dut|LCD:LCD|i[26]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835 ; design_7:dut|LCD:LCD|i[28] ; design_7:dut|LCD:LCD|i[28]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.101      ;
+; 0.838 ; design_7:dut|LCD:LCD|i[3]  ; design_7:dut|LCD:LCD|i[3]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; design_7:dut|LCD:LCD|i[8]  ; design_7:dut|LCD:LCD|i[8]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; design_7:dut|LCD:LCD|i[10] ; design_7:dut|LCD:LCD|i[10]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; design_7:dut|LCD:LCD|i[12] ; design_7:dut|LCD:LCD|i[12]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.104      ;
+; 0.839 ; design_7:dut|LCD:LCD|i[5]  ; design_7:dut|LCD:LCD|i[5]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839 ; design_7:dut|LCD:LCD|i[6]  ; design_7:dut|LCD:LCD|i[6]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.105      ;
+; 1.101 ; design_7:dut|LCD:LCD|j[5]  ; design_7:dut|LCD:LCD|data_lcd[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.364      ;
+; 1.114 ; design_7:dut|LCD:LCD|j[4]  ; design_7:dut|LCD:LCD|data_lcd[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 1.375      ;
+; 1.178 ; design_7:dut|LCD:LCD|i[0]  ; design_7:dut|LCD:LCD|i[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.444      ;
+; 1.183 ; design_7:dut|LCD:LCD|j[31] ; design_7:dut|LCD:LCD|j[30]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.450      ;
+; 1.185 ; design_7:dut|LCD:LCD|i[4]  ; design_7:dut|LCD:LCD|i[5]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.451      ;
+; 1.186 ; design_7:dut|LCD:LCD|i[16] ; design_7:dut|LCD:LCD|i[17]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.452      ;
+; 1.189 ; design_7:dut|LCD:LCD|i[30] ; design_7:dut|LCD:LCD|i[31]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; design_7:dut|LCD:LCD|i[13] ; design_7:dut|LCD:LCD|i[14]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; design_7:dut|LCD:LCD|i[29] ; design_7:dut|LCD:LCD|i[30]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; design_7:dut|LCD:LCD|i[14] ; design_7:dut|LCD:LCD|i[15]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; design_7:dut|LCD:LCD|i[25] ; design_7:dut|LCD:LCD|i[26]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; design_7:dut|LCD:LCD|i[27] ; design_7:dut|LCD:LCD|i[28]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; design_7:dut|LCD:LCD|i[9]  ; design_7:dut|LCD:LCD|i[10]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; design_7:dut|LCD:LCD|i[11] ; design_7:dut|LCD:LCD|i[12]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.192 ; design_7:dut|LCD:LCD|i[18] ; design_7:dut|LCD:LCD|i[19]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.458      ;
+; 1.196 ; design_7:dut|LCD:LCD|i[17] ; design_7:dut|LCD:LCD|i[18]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.462      ;
+; 1.201 ; design_7:dut|LCD:LCD|j[5]  ; design_7:dut|LCD:LCD|data_lcd[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.464      ;
+; 1.214 ; design_7:dut|LCD:LCD|i[19] ; design_7:dut|LCD:LCD|i[20]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.221 ; design_7:dut|LCD:LCD|i[26] ; design_7:dut|LCD:LCD|i[27]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.487      ;
+; 1.221 ; design_7:dut|LCD:LCD|i[28] ; design_7:dut|LCD:LCD|i[29]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.487      ;
+; 1.224 ; design_7:dut|LCD:LCD|i[3]  ; design_7:dut|LCD:LCD|i[4]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; design_7:dut|LCD:LCD|i[8]  ; design_7:dut|LCD:LCD|i[9]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; design_7:dut|LCD:LCD|i[10] ; design_7:dut|LCD:LCD|i[11]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; design_7:dut|LCD:LCD|i[12] ; design_7:dut|LCD:LCD|i[13]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.490      ;
+; 1.225 ; design_7:dut|LCD:LCD|i[6]  ; design_7:dut|LCD:LCD|i[7]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225 ; design_7:dut|LCD:LCD|i[5]  ; design_7:dut|LCD:LCD|i[6]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.491      ;
+; 1.256 ; design_7:dut|LCD:LCD|i[4]  ; design_7:dut|LCD:LCD|i[6]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.522      ;
+; 1.257 ; design_7:dut|LCD:LCD|i[16] ; design_7:dut|LCD:LCD|i[18]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.523      ;
+; 1.259 ; design_7:dut|LCD:LCD|i[1]  ; design_7:dut|LCD:LCD|i[3]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.525      ;
+; 1.260 ; design_7:dut|LCD:LCD|i[29] ; design_7:dut|LCD:LCD|i[31]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; design_7:dut|LCD:LCD|i[13] ; design_7:dut|LCD:LCD|i[15]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; design_7:dut|LCD:LCD|i[25] ; design_7:dut|LCD:LCD|i[27]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; design_7:dut|LCD:LCD|i[27] ; design_7:dut|LCD:LCD|i[29]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; design_7:dut|LCD:LCD|i[9]  ; design_7:dut|LCD:LCD|i[11]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; design_7:dut|LCD:LCD|i[11] ; design_7:dut|LCD:LCD|i[13]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.526      ;
+; 1.263 ; design_7:dut|LCD:LCD|i[18] ; design_7:dut|LCD:LCD|i[20]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.529      ;
+; 1.267 ; design_7:dut|LCD:LCD|i[17] ; design_7:dut|LCD:LCD|i[19]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.533      ;
+; 1.272 ; design_7:dut|LCD:LCD|j[5]  ; design_7:dut|LCD:LCD|data_lcd[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.537      ;
+; 1.276 ; design_7:dut|LCD:LCD|j[5]  ; design_7:dut|LCD:LCD|data_lcd[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.541      ;
+; 1.277 ; design_7:dut|LCD:LCD|i[7]  ; design_7:dut|LCD:LCD|i[8]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.543      ;
+; 1.292 ; design_7:dut|LCD:LCD|i[28] ; design_7:dut|LCD:LCD|i[30]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.558      ;
+; 1.292 ; design_7:dut|LCD:LCD|i[26] ; design_7:dut|LCD:LCD|i[28]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.558      ;
+; 1.295 ; design_7:dut|LCD:LCD|i[3]  ; design_7:dut|LCD:LCD|i[5]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295 ; design_7:dut|LCD:LCD|i[12] ; design_7:dut|LCD:LCD|i[14]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295 ; design_7:dut|LCD:LCD|i[8]  ; design_7:dut|LCD:LCD|i[10]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295 ; design_7:dut|LCD:LCD|i[10] ; design_7:dut|LCD:LCD|i[12]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.561      ;
+; 1.296 ; design_7:dut|LCD:LCD|i[15] ; design_7:dut|LCD:LCD|i[16]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 1.555      ;
+; 1.296 ; design_7:dut|LCD:LCD|i[5]  ; design_7:dut|LCD:LCD|i[7]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.562      ;
+; 1.320 ; design_7:dut|LCD:LCD|i[0]  ; design_7:dut|LCD:LCD|i[3]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.586      ;
+; 1.327 ; design_7:dut|LCD:LCD|i[4]  ; design_7:dut|LCD:LCD|i[7]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.593      ;
+; 1.328 ; design_7:dut|LCD:LCD|i[16] ; design_7:dut|LCD:LCD|i[19]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.594      ;
+; 1.330 ; design_7:dut|LCD:LCD|i[1]  ; design_7:dut|LCD:LCD|i[4]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.596      ;
+; 1.331 ; design_7:dut|LCD:LCD|i[27] ; design_7:dut|LCD:LCD|i[30]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331 ; design_7:dut|LCD:LCD|i[25] ; design_7:dut|LCD:LCD|i[28]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331 ; design_7:dut|LCD:LCD|i[11] ; design_7:dut|LCD:LCD|i[14]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331 ; design_7:dut|LCD:LCD|i[9]  ; design_7:dut|LCD:LCD|i[12]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.597      ;
+; 1.338 ; design_7:dut|LCD:LCD|i[17] ; design_7:dut|LCD:LCD|i[20]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.604      ;
+; 1.342 ; design_7:dut|LCD:LCD|i[14] ; design_7:dut|LCD:LCD|i[16]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 1.601      ;
+; 1.348 ; design_7:dut|LCD:LCD|i[7]  ; design_7:dut|LCD:LCD|i[9]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.614      ;
+; 1.356 ; design_7:dut|LCD:LCD|j[30] ; design_7:dut|LCD:LCD|j[31]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.621      ;
+; 1.358 ; design_7:dut|LCD:LCD|i[2]  ; design_7:dut|LCD:LCD|i[3]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.623      ;
+; 1.363 ; design_7:dut|LCD:LCD|i[28] ; design_7:dut|LCD:LCD|i[31]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.629      ;
+; 1.363 ; design_7:dut|LCD:LCD|i[26] ; design_7:dut|LCD:LCD|i[29]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.629      ;
+; 1.366 ; design_7:dut|LCD:LCD|i[3]  ; design_7:dut|LCD:LCD|i[6]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.632      ;
+; 1.366 ; design_7:dut|LCD:LCD|i[12] ; design_7:dut|LCD:LCD|i[15]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.632      ;
+; 1.366 ; design_7:dut|LCD:LCD|i[8]  ; design_7:dut|LCD:LCD|i[11]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.632      ;
+; 1.366 ; design_7:dut|LCD:LCD|i[10] ; design_7:dut|LCD:LCD|i[13]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.632      ;
+; 1.367 ; design_7:dut|LCD:LCD|i[15] ; design_7:dut|LCD:LCD|i[17]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 1.626      ;
+; 1.370 ; design_7:dut|LCD:LCD|i[24] ; design_7:dut|LCD:LCD|i[25]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.635      ;
+; 1.384 ; design_7:dut|LCD:LCD|i[6]  ; design_7:dut|LCD:LCD|i[8]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.650      ;
+; 1.391 ; design_7:dut|LCD:LCD|i[0]  ; design_7:dut|LCD:LCD|i[4]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.657      ;
++-------+----------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                                            ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|data_lcd[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|data_lcd[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|data_lcd[1]  ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'KEY[0]'                                                             ;
++--------+--------------+----------------+------------------+--------+------------+--------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target             ;
++--------+--------------+----------------+------------------+--------+------------+--------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[0] ; Rise       ; KEY[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; KEY[0]|combout     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; KEY[0]|combout     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[0]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[0]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[10] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[10] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[11] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[11] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[12] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[12] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[13] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[13] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[14] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[14] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[15] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[15] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[1]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[1]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[2]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[2]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[3]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[3]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[6]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[6]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[7]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[7]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[8]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[8]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[0]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[0]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[10]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[10]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[11]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[11]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[12]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[12]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[13]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[13]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[14]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[14]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[15]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[15]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[1]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[1]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[2]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[2]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[3]|datac     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[3]|datac     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[4]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[4]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[5]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[5]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[6]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[6]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[7]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[7]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[8]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[8]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[9]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[9]|datad     ;
++--------+--------------+----------------+------------------+--------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'KEY[1]'                                                                       ;
++--------+--------------+----------------+------------------+--------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                       ;
++--------+--------------+----------------+------------------+--------+------------+------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[1] ; Rise       ; KEY[1]                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; KEY[1]|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; KEY[1]|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; KEY[1]~clk_delay_ctrl|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; KEY[1]~clk_delay_ctrl|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; KEY[1]~clk_delay_ctrl|clkout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; KEY[1]~clk_delay_ctrl|clkout ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; KEY[1]~clkctrl|inclk[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; KEY[1]~clkctrl|inclk[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; KEY[1]~clkctrl|outclk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; KEY[1]~clkctrl|outclk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[0]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[0]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[10]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[10]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[11]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[11]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[12]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[12]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[13]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[13]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[14]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[14]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[15]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[15]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[1]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[1]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[2]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[2]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[3]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[3]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[4]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[4]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[5]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[5]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[6]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[6]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[7]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[7]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[8]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[8]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[9]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[9]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[0]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[0]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[10]|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[10]|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[11]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[11]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[12]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[12]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[13]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[13]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[14]|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[14]|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[15]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[15]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[1]|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[1]|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[2]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[2]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[3]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[3]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[4]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[4]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[5]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[5]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[6]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[6]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[7]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[7]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[8]|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[8]|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[9]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[9]|datad               ;
++--------+--------------+----------------+------------------+--------+------------+------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 4.428  ; 4.428  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.812  ; 0.812  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 1.191  ; 1.191  ; Rise       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.605  ; 0.605  ; Rise       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; -0.195 ; -0.195 ; Rise       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 0.133  ; 0.133  ; Rise       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; -0.557 ; -0.557 ; Rise       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; -0.616 ; -0.616 ; Rise       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.395  ; 0.395  ; Rise       ; KEY[0]          ;
+;  SW[8]    ; KEY[0]     ; 0.364  ; 0.364  ; Rise       ; KEY[0]          ;
+;  SW[9]    ; KEY[0]     ; 0.644  ; 0.644  ; Rise       ; KEY[0]          ;
+;  SW[10]   ; KEY[0]     ; 0.710  ; 0.710  ; Rise       ; KEY[0]          ;
+;  SW[11]   ; KEY[0]     ; 0.626  ; 0.626  ; Rise       ; KEY[0]          ;
+;  SW[12]   ; KEY[0]     ; 0.278  ; 0.278  ; Rise       ; KEY[0]          ;
+;  SW[13]   ; KEY[0]     ; 4.203  ; 4.203  ; Rise       ; KEY[0]          ;
+;  SW[14]   ; KEY[0]     ; 4.140  ; 4.140  ; Rise       ; KEY[0]          ;
+;  SW[15]   ; KEY[0]     ; 4.428  ; 4.428  ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[1]     ; 5.530  ; 5.530  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 1.737  ; 1.737  ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 1.644  ; 1.644  ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 1.200  ; 1.200  ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 1.741  ; 1.741  ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 1.572  ; 1.572  ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 1.444  ; 1.444  ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 1.625  ; 1.625  ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 1.683  ; 1.683  ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; 1.368  ; 1.368  ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; 2.044  ; 2.044  ; Rise       ; KEY[1]          ;
+;  SW[10]   ; KEY[1]     ; 0.900  ; 0.900  ; Rise       ; KEY[1]          ;
+;  SW[11]   ; KEY[1]     ; 1.498  ; 1.498  ; Rise       ; KEY[1]          ;
+;  SW[12]   ; KEY[1]     ; 0.843  ; 0.843  ; Rise       ; KEY[1]          ;
+;  SW[13]   ; KEY[1]     ; 5.530  ; 5.530  ; Rise       ; KEY[1]          ;
+;  SW[14]   ; KEY[1]     ; 4.543  ; 4.543  ; Rise       ; KEY[1]          ;
+;  SW[15]   ; KEY[1]     ; 5.231  ; 5.231  ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 1.347  ; 1.347  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.048  ; 0.048  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; -0.327 ; -0.327 ; Rise       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.294  ; 0.294  ; Rise       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 0.893  ; 0.893  ; Rise       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 0.786  ; 0.786  ; Rise       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 1.303  ; 1.303  ; Rise       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 1.347  ; 1.347  ; Rise       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.317  ; 0.317  ; Rise       ; KEY[0]          ;
+;  SW[8]    ; KEY[0]     ; 0.377  ; 0.377  ; Rise       ; KEY[0]          ;
+;  SW[9]    ; KEY[0]     ; 0.288  ; 0.288  ; Rise       ; KEY[0]          ;
+;  SW[10]   ; KEY[0]     ; 0.165  ; 0.165  ; Rise       ; KEY[0]          ;
+;  SW[11]   ; KEY[0]     ; 0.258  ; 0.258  ; Rise       ; KEY[0]          ;
+;  SW[12]   ; KEY[0]     ; 0.419  ; 0.419  ; Rise       ; KEY[0]          ;
+;  SW[13]   ; KEY[0]     ; -3.314 ; -3.314 ; Rise       ; KEY[0]          ;
+;  SW[14]   ; KEY[0]     ; -3.259 ; -3.259 ; Rise       ; KEY[0]          ;
+;  SW[15]   ; KEY[0]     ; -3.550 ; -3.550 ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[1]     ; 0.014  ; 0.014  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; -0.884 ; -0.884 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; -0.945 ; -0.945 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; -0.307 ; -0.307 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; -1.003 ; -1.003 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; -0.818 ; -0.818 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; -0.759 ; -0.759 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; -0.913 ; -0.913 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; -0.799 ; -0.799 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; -0.628 ; -0.628 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; -1.189 ; -1.189 ; Rise       ; KEY[1]          ;
+;  SW[10]   ; KEY[1]     ; -0.193 ; -0.193 ; Rise       ; KEY[1]          ;
+;  SW[11]   ; KEY[1]     ; -0.652 ; -0.652 ; Rise       ; KEY[1]          ;
+;  SW[12]   ; KEY[1]     ; 0.014  ; 0.014  ; Rise       ; KEY[1]          ;
+;  SW[13]   ; KEY[1]     ; -4.805 ; -4.805 ; Rise       ; KEY[1]          ;
+;  SW[14]   ; KEY[1]     ; -3.816 ; -3.816 ; Rise       ; KEY[1]          ;
+;  SW[15]   ; KEY[1]     ; -4.280 ; -4.280 ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; LCD_DATA[*]  ; CLOCK_50   ; 7.685 ; 7.685 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[0] ; CLOCK_50   ; 7.418 ; 7.418 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[1] ; CLOCK_50   ; 7.241 ; 7.241 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[2] ; CLOCK_50   ; 7.019 ; 7.019 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[3] ; CLOCK_50   ; 7.685 ; 7.685 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[4] ; CLOCK_50   ; 7.441 ; 7.441 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[5] ; CLOCK_50   ; 7.016 ; 7.016 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[6] ; CLOCK_50   ; 7.421 ; 7.421 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[7] ; CLOCK_50   ; 7.443 ; 7.443 ; Rise       ; CLOCK_50        ;
+; LCD_EN       ; CLOCK_50   ; 7.666 ; 7.666 ; Rise       ; CLOCK_50        ;
+; LCD_RS       ; CLOCK_50   ; 7.274 ; 7.274 ; Rise       ; CLOCK_50        ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; LCD_DATA[*]  ; CLOCK_50   ; 7.016 ; 7.016 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[0] ; CLOCK_50   ; 7.418 ; 7.418 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[1] ; CLOCK_50   ; 7.241 ; 7.241 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[2] ; CLOCK_50   ; 7.019 ; 7.019 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[3] ; CLOCK_50   ; 7.685 ; 7.685 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[4] ; CLOCK_50   ; 7.441 ; 7.441 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[5] ; CLOCK_50   ; 7.016 ; 7.016 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[6] ; CLOCK_50   ; 7.421 ; 7.421 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[7] ; CLOCK_50   ; 7.443 ; 7.443 ; Rise       ; CLOCK_50        ;
+; LCD_EN       ; CLOCK_50   ; 7.666 ; 7.666 ; Rise       ; CLOCK_50        ;
+; LCD_RS       ; CLOCK_50   ; 7.274 ; 7.274 ; Rise       ; CLOCK_50        ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------+
+; Fast Model Setup Summary           ;
++----------+---------+---------------+
+; Clock    ; Slack   ; End Point TNS ;
++----------+---------+---------------+
+; CLOCK_50 ; -70.341 ; -2714.527     ;
++----------+---------+---------------+
+
+
++----------------------------------+
+; Fast Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.215 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; -1.380 ; -123.380           ;
+; KEY[0]   ; -1.222 ; -1.222             ;
+; KEY[1]   ; -1.222 ; -1.222             ;
++----------+--------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_50'                                                                                                           ;
++---------+--------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node          ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+--------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -70.341 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.430     ; 70.943     ;
+; -70.178 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.430     ; 70.780     ;
+; -70.178 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.430     ; 70.780     ;
+; -70.151 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.436     ; 70.747     ;
+; -70.111 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.213     ; 70.930     ;
+; -70.049 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.339     ; 70.742     ;
+; -70.024 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.353     ; 70.703     ;
+; -69.948 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.213     ; 70.767     ;
+; -69.948 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.213     ; 70.767     ;
+; -69.921 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.219     ; 70.734     ;
+; -69.901 ; design_7:dut|A[7]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.199     ; 70.734     ;
+; -69.886 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.339     ; 70.579     ;
+; -69.886 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.339     ; 70.579     ;
+; -69.861 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.353     ; 70.540     ;
+; -69.861 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.353     ; 70.540     ;
+; -69.859 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.345     ; 70.546     ;
+; -69.836 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.443     ; 70.425     ;
+; -69.834 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.359     ; 70.507     ;
+; -69.828 ; design_7:dut|A[10] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.293     ; 70.567     ;
+; -69.782 ; design_7:dut|A[9]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.374     ; 70.440     ;
+; -69.767 ; design_7:dut|A[2]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.306     ; 70.493     ;
+; -69.766 ; design_7:dut|A[3]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.268     ; 70.530     ;
+; -69.738 ; design_7:dut|A[7]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.199     ; 70.571     ;
+; -69.738 ; design_7:dut|A[7]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.199     ; 70.571     ;
+; -69.738 ; design_7:dut|A[8]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.289     ; 70.481     ;
+; -69.717 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.443     ; 70.306     ;
+; -69.714 ; design_7:dut|A[13] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.422     ; 70.324     ;
+; -69.711 ; design_7:dut|A[7]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.205     ; 70.538     ;
+; -69.665 ; design_7:dut|A[10] ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.293     ; 70.404     ;
+; -69.665 ; design_7:dut|A[10] ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.293     ; 70.404     ;
+; -69.661 ; design_7:dut|A[4]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.199     ; 70.494     ;
+; -69.638 ; design_7:dut|A[10] ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.299     ; 70.371     ;
+; -69.634 ; design_7:dut|A[11] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.247     ; 70.419     ;
+; -69.629 ; design_7:dut|A[15] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.422     ; 70.239     ;
+; -69.619 ; design_7:dut|A[9]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.374     ; 70.277     ;
+; -69.619 ; design_7:dut|A[9]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.374     ; 70.277     ;
+; -69.606 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.226     ; 70.412     ;
+; -69.604 ; design_7:dut|A[2]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.306     ; 70.330     ;
+; -69.604 ; design_7:dut|A[2]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.306     ; 70.330     ;
+; -69.603 ; design_7:dut|A[3]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.268     ; 70.367     ;
+; -69.603 ; design_7:dut|A[3]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.268     ; 70.367     ;
+; -69.592 ; design_7:dut|A[9]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.380     ; 70.244     ;
+; -69.577 ; design_7:dut|A[2]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.312     ; 70.297     ;
+; -69.576 ; design_7:dut|A[14] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.415     ; 70.193     ;
+; -69.576 ; design_7:dut|A[3]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.274     ; 70.334     ;
+; -69.575 ; design_7:dut|A[8]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.289     ; 70.318     ;
+; -69.575 ; design_7:dut|A[8]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.289     ; 70.318     ;
+; -69.551 ; design_7:dut|A[13] ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.422     ; 70.161     ;
+; -69.551 ; design_7:dut|A[13] ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.422     ; 70.161     ;
+; -69.550 ; design_7:dut|A[12] ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.416     ; 70.166     ;
+; -69.548 ; design_7:dut|A[8]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.295     ; 70.285     ;
+; -69.544 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.352     ; 70.224     ;
+; -69.524 ; design_7:dut|A[13] ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.428     ; 70.128     ;
+; -69.519 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.366     ; 70.185     ;
+; -69.516 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[31][2] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.430     ; 70.118     ;
+; -69.498 ; design_7:dut|A[4]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.199     ; 70.331     ;
+; -69.498 ; design_7:dut|A[4]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.199     ; 70.331     ;
+; -69.487 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.226     ; 70.293     ;
+; -69.471 ; design_7:dut|A[4]  ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.205     ; 70.298     ;
+; -69.471 ; design_7:dut|A[11] ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.247     ; 70.256     ;
+; -69.471 ; design_7:dut|A[11] ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.247     ; 70.256     ;
+; -69.466 ; design_7:dut|A[15] ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.422     ; 70.076     ;
+; -69.466 ; design_7:dut|A[15] ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.422     ; 70.076     ;
+; -69.444 ; design_7:dut|A[11] ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.253     ; 70.223     ;
+; -69.439 ; design_7:dut|A[15] ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.428     ; 70.043     ;
+; -69.425 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.352     ; 70.105     ;
+; -69.413 ; design_7:dut|A[14] ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.415     ; 70.030     ;
+; -69.413 ; design_7:dut|A[14] ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.415     ; 70.030     ;
+; -69.412 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[30][0] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.443     ; 70.001     ;
+; -69.411 ; design_7:dut|A[1]  ; design_7:dut|LCD:LCD|Datas[30][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.443     ; 70.000     ;
+; -69.400 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.366     ; 70.066     ;
+; -69.396 ; design_7:dut|A[7]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.212     ; 70.216     ;
+; -69.387 ; design_7:dut|A[12] ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.416     ; 70.003     ;
+; -69.387 ; design_7:dut|A[12] ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.416     ; 70.003     ;
+; -69.386 ; design_7:dut|A[14] ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.421     ; 69.997     ;
+; -69.360 ; design_7:dut|A[12] ; design_7:dut|LCD:LCD|Datas[31][4] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.422     ; 69.970     ;
+; -69.323 ; design_7:dut|A[10] ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.306     ; 70.049     ;
+; -69.316 ; design_7:dut|B[5]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.173      ; 70.521     ;
+; -69.310 ; design_7:dut|B[0]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.176      ; 70.518     ;
+; -69.286 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[31][2] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.213     ; 70.105     ;
+; -69.277 ; design_7:dut|A[9]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.387     ; 69.922     ;
+; -69.277 ; design_7:dut|A[7]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.212     ; 70.097     ;
+; -69.262 ; design_7:dut|A[2]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.319     ; 69.975     ;
+; -69.261 ; design_7:dut|A[3]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.281     ; 70.012     ;
+; -69.254 ; design_7:dut|B[1]  ; design_7:dut|LCD:LCD|Datas[31][7] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.136      ; 70.422     ;
+; -69.233 ; design_7:dut|A[8]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.302     ; 69.963     ;
+; -69.224 ; design_7:dut|A[5]  ; design_7:dut|LCD:LCD|Datas[31][2] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.339     ; 69.917     ;
+; -69.209 ; design_7:dut|A[13] ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.435     ; 69.806     ;
+; -69.204 ; design_7:dut|A[10] ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.306     ; 69.930     ;
+; -69.199 ; design_7:dut|A[6]  ; design_7:dut|LCD:LCD|Datas[31][2] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.353     ; 69.878     ;
+; -69.182 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[30][0] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.226     ; 69.988     ;
+; -69.181 ; design_7:dut|A[0]  ; design_7:dut|LCD:LCD|Datas[30][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.226     ; 69.987     ;
+; -69.158 ; design_7:dut|A[9]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.387     ; 69.803     ;
+; -69.156 ; design_7:dut|A[4]  ; design_7:dut|LCD:LCD|Datas[31][3] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.212     ; 69.976     ;
+; -69.153 ; design_7:dut|B[5]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.173      ; 70.358     ;
+; -69.153 ; design_7:dut|B[5]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.173      ; 70.358     ;
+; -69.147 ; design_7:dut|B[0]  ; design_7:dut|LCD:LCD|Datas[31][5] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.176      ; 70.355     ;
+; -69.147 ; design_7:dut|B[0]  ; design_7:dut|LCD:LCD|Datas[31][6] ; KEY[1]       ; CLOCK_50    ; 1.000        ; 0.176      ; 70.355     ;
+; -69.143 ; design_7:dut|A[2]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.319     ; 69.856     ;
+; -69.142 ; design_7:dut|A[3]  ; design_7:dut|LCD:LCD|Datas[31][1] ; KEY[0]       ; CLOCK_50    ; 1.000        ; -0.281     ; 69.893     ;
++---------+--------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_50'                                                                                                                 ;
++-------+----------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                  ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; design_7:dut|LCD:LCD|lcd_e ; design_7:dut|LCD:LCD|lcd_e       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.236 ; design_7:dut|LCD:LCD|j[31] ; design_7:dut|LCD:LCD|j[31]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.388      ;
+; 0.243 ; design_7:dut|LCD:LCD|i[31] ; design_7:dut|LCD:LCD|i[31]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.395      ;
+; 0.355 ; design_7:dut|LCD:LCD|i[0]  ; design_7:dut|LCD:LCD|i[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.507      ;
+; 0.358 ; design_7:dut|LCD:LCD|i[4]  ; design_7:dut|LCD:LCD|i[4]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; design_7:dut|LCD:LCD|i[16] ; design_7:dut|LCD:LCD|i[16]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; design_7:dut|LCD:LCD|i[20] ; design_7:dut|LCD:LCD|i[20]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; design_7:dut|LCD:LCD|i[7]  ; design_7:dut|LCD:LCD|i[7]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; design_7:dut|LCD:LCD|i[1]  ; design_7:dut|LCD:LCD|i[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; design_7:dut|LCD:LCD|i[9]  ; design_7:dut|LCD:LCD|i[9]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; design_7:dut|LCD:LCD|i[11] ; design_7:dut|LCD:LCD|i[11]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; design_7:dut|LCD:LCD|i[25] ; design_7:dut|LCD:LCD|i[25]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; design_7:dut|LCD:LCD|i[27] ; design_7:dut|LCD:LCD|i[27]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; design_7:dut|LCD:LCD|i[13] ; design_7:dut|LCD:LCD|i[13]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; design_7:dut|LCD:LCD|i[14] ; design_7:dut|LCD:LCD|i[14]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; design_7:dut|LCD:LCD|i[18] ; design_7:dut|LCD:LCD|i[18]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; design_7:dut|LCD:LCD|i[29] ; design_7:dut|LCD:LCD|i[29]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; design_7:dut|LCD:LCD|i[30] ; design_7:dut|LCD:LCD|i[30]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; design_7:dut|LCD:LCD|i[17] ; design_7:dut|LCD:LCD|i[17]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.514      ;
+; 0.364 ; design_7:dut|LCD:LCD|i[15] ; design_7:dut|LCD:LCD|i[15]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.516      ;
+; 0.367 ; design_7:dut|LCD:LCD|i[19] ; design_7:dut|LCD:LCD|i[19]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.519      ;
+; 0.369 ; design_7:dut|LCD:LCD|i[26] ; design_7:dut|LCD:LCD|i[26]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; design_7:dut|LCD:LCD|i[28] ; design_7:dut|LCD:LCD|i[28]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; design_7:dut|LCD:LCD|i[3]  ; design_7:dut|LCD:LCD|i[3]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; design_7:dut|LCD:LCD|i[8]  ; design_7:dut|LCD:LCD|i[8]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; design_7:dut|LCD:LCD|i[10] ; design_7:dut|LCD:LCD|i[10]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; design_7:dut|LCD:LCD|i[5]  ; design_7:dut|LCD:LCD|i[5]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; design_7:dut|LCD:LCD|i[6]  ; design_7:dut|LCD:LCD|i[6]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; design_7:dut|LCD:LCD|i[12] ; design_7:dut|LCD:LCD|i[12]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.493 ; design_7:dut|LCD:LCD|i[0]  ; design_7:dut|LCD:LCD|i[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.645      ;
+; 0.496 ; design_7:dut|LCD:LCD|i[16] ; design_7:dut|LCD:LCD|i[17]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496 ; design_7:dut|LCD:LCD|i[4]  ; design_7:dut|LCD:LCD|i[5]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.648      ;
+; 0.498 ; design_7:dut|LCD:LCD|i[25] ; design_7:dut|LCD:LCD|i[26]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; design_7:dut|LCD:LCD|i[27] ; design_7:dut|LCD:LCD|i[28]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; design_7:dut|LCD:LCD|i[9]  ; design_7:dut|LCD:LCD|i[10]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; design_7:dut|LCD:LCD|i[11] ; design_7:dut|LCD:LCD|i[12]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499 ; design_7:dut|LCD:LCD|j[5]  ; design_7:dut|LCD:LCD|data_lcd[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 0.648      ;
+; 0.499 ; design_7:dut|LCD:LCD|i[30] ; design_7:dut|LCD:LCD|i[31]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; design_7:dut|LCD:LCD|i[13] ; design_7:dut|LCD:LCD|i[14]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; design_7:dut|LCD:LCD|i[29] ; design_7:dut|LCD:LCD|i[30]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; design_7:dut|LCD:LCD|i[14] ; design_7:dut|LCD:LCD|i[15]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; design_7:dut|LCD:LCD|i[18] ; design_7:dut|LCD:LCD|i[19]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500 ; design_7:dut|LCD:LCD|i[17] ; design_7:dut|LCD:LCD|i[18]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.652      ;
+; 0.502 ; design_7:dut|LCD:LCD|j[4]  ; design_7:dut|LCD:LCD|data_lcd[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 0.649      ;
+; 0.507 ; design_7:dut|LCD:LCD|i[19] ; design_7:dut|LCD:LCD|i[20]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.659      ;
+; 0.509 ; design_7:dut|LCD:LCD|i[26] ; design_7:dut|LCD:LCD|i[27]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; design_7:dut|LCD:LCD|i[28] ; design_7:dut|LCD:LCD|i[29]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.661      ;
+; 0.511 ; design_7:dut|LCD:LCD|i[3]  ; design_7:dut|LCD:LCD|i[4]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; design_7:dut|LCD:LCD|i[8]  ; design_7:dut|LCD:LCD|i[9]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; design_7:dut|LCD:LCD|i[10] ; design_7:dut|LCD:LCD|i[11]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; design_7:dut|LCD:LCD|i[6]  ; design_7:dut|LCD:LCD|i[7]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; design_7:dut|LCD:LCD|i[12] ; design_7:dut|LCD:LCD|i[13]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; design_7:dut|LCD:LCD|i[5]  ; design_7:dut|LCD:LCD|i[6]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.664      ;
+; 0.531 ; design_7:dut|LCD:LCD|i[16] ; design_7:dut|LCD:LCD|i[18]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.683      ;
+; 0.531 ; design_7:dut|LCD:LCD|i[4]  ; design_7:dut|LCD:LCD|i[6]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.683      ;
+; 0.532 ; design_7:dut|LCD:LCD|i[1]  ; design_7:dut|LCD:LCD|i[3]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.684      ;
+; 0.533 ; design_7:dut|LCD:LCD|i[25] ; design_7:dut|LCD:LCD|i[27]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; design_7:dut|LCD:LCD|i[27] ; design_7:dut|LCD:LCD|i[29]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; design_7:dut|LCD:LCD|i[9]  ; design_7:dut|LCD:LCD|i[11]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; design_7:dut|LCD:LCD|i[11] ; design_7:dut|LCD:LCD|i[13]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534 ; design_7:dut|LCD:LCD|i[29] ; design_7:dut|LCD:LCD|i[31]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534 ; design_7:dut|LCD:LCD|i[13] ; design_7:dut|LCD:LCD|i[15]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534 ; design_7:dut|LCD:LCD|i[18] ; design_7:dut|LCD:LCD|i[20]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.686      ;
+; 0.535 ; design_7:dut|LCD:LCD|i[17] ; design_7:dut|LCD:LCD|i[19]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.687      ;
+; 0.544 ; design_7:dut|LCD:LCD|i[26] ; design_7:dut|LCD:LCD|i[28]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; design_7:dut|LCD:LCD|i[28] ; design_7:dut|LCD:LCD|i[30]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.696      ;
+; 0.546 ; design_7:dut|LCD:LCD|j[31] ; design_7:dut|LCD:LCD|j[30]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.699      ;
+; 0.546 ; design_7:dut|LCD:LCD|i[3]  ; design_7:dut|LCD:LCD|i[5]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; design_7:dut|LCD:LCD|i[8]  ; design_7:dut|LCD:LCD|i[10]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; design_7:dut|LCD:LCD|i[10] ; design_7:dut|LCD:LCD|i[12]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; design_7:dut|LCD:LCD|i[12] ; design_7:dut|LCD:LCD|i[14]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.699      ;
+; 0.547 ; design_7:dut|LCD:LCD|i[5]  ; design_7:dut|LCD:LCD|i[7]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.699      ;
+; 0.551 ; design_7:dut|LCD:LCD|i[7]  ; design_7:dut|LCD:LCD|i[8]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.703      ;
+; 0.556 ; design_7:dut|LCD:LCD|i[15] ; design_7:dut|LCD:LCD|i[16]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 0.701      ;
+; 0.563 ; design_7:dut|LCD:LCD|i[0]  ; design_7:dut|LCD:LCD|i[3]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.715      ;
+; 0.566 ; design_7:dut|LCD:LCD|i[16] ; design_7:dut|LCD:LCD|i[19]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.718      ;
+; 0.566 ; design_7:dut|LCD:LCD|i[4]  ; design_7:dut|LCD:LCD|i[7]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.718      ;
+; 0.567 ; design_7:dut|LCD:LCD|i[1]  ; design_7:dut|LCD:LCD|i[4]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568 ; design_7:dut|LCD:LCD|i[25] ; design_7:dut|LCD:LCD|i[28]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; design_7:dut|LCD:LCD|i[27] ; design_7:dut|LCD:LCD|i[30]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; design_7:dut|LCD:LCD|i[9]  ; design_7:dut|LCD:LCD|i[12]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; design_7:dut|LCD:LCD|i[11] ; design_7:dut|LCD:LCD|i[14]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.720      ;
+; 0.570 ; design_7:dut|LCD:LCD|j[5]  ; design_7:dut|LCD:LCD|data_lcd[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 0.719      ;
+; 0.570 ; design_7:dut|LCD:LCD|i[17] ; design_7:dut|LCD:LCD|i[20]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.722      ;
+; 0.575 ; design_7:dut|LCD:LCD|j[30] ; design_7:dut|LCD:LCD|j[31]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.726      ;
+; 0.575 ; design_7:dut|LCD:LCD|i[2]  ; design_7:dut|LCD:LCD|i[3]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.726      ;
+; 0.579 ; design_7:dut|LCD:LCD|i[26] ; design_7:dut|LCD:LCD|i[29]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; design_7:dut|LCD:LCD|i[28] ; design_7:dut|LCD:LCD|i[31]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.580 ; design_7:dut|LCD:LCD|i[24] ; design_7:dut|LCD:LCD|i[25]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 0.730      ;
+; 0.581 ; design_7:dut|LCD:LCD|i[3]  ; design_7:dut|LCD:LCD|i[6]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; design_7:dut|LCD:LCD|i[8]  ; design_7:dut|LCD:LCD|i[11]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; design_7:dut|LCD:LCD|i[10] ; design_7:dut|LCD:LCD|i[13]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.733      ;
+; 0.582 ; design_7:dut|LCD:LCD|i[12] ; design_7:dut|LCD:LCD|i[15]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.734      ;
+; 0.585 ; design_7:dut|LCD:LCD|j[5]  ; design_7:dut|LCD:LCD|data_lcd[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.736      ;
+; 0.586 ; design_7:dut|LCD:LCD|i[7]  ; design_7:dut|LCD:LCD|i[9]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.738      ;
+; 0.589 ; design_7:dut|LCD:LCD|j[5]  ; design_7:dut|LCD:LCD|data_lcd[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.740      ;
+; 0.591 ; design_7:dut|LCD:LCD|i[15] ; design_7:dut|LCD:LCD|i[17]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 0.736      ;
+; 0.593 ; design_7:dut|LCD:LCD|i[14] ; design_7:dut|LCD:LCD|i[16]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 0.738      ;
+; 0.598 ; design_7:dut|LCD:LCD|i[0]  ; design_7:dut|LCD:LCD|i[4]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.750      ;
+; 0.601 ; design_7:dut|LCD:LCD|i[16] ; design_7:dut|LCD:LCD|i[20]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.753      ;
++-------+----------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                                            ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[21][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[22][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[23][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[24][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[25][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[27][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[28][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[29][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[30][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|Datas[31][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|data_lcd[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|data_lcd[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; design_7:dut|LCD:LCD|data_lcd[1]  ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'KEY[0]'                                                             ;
++--------+--------------+----------------+------------------+--------+------------+--------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target             ;
++--------+--------------+----------------+------------------+--------+------------+--------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[0] ; Rise       ; KEY[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; KEY[0]|combout     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; KEY[0]|combout     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[0]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[0]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[10] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[10] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[11] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[11] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[12] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[12] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[13] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[13] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[14] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[14] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[15] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[15] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[1]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[1]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[2]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[2]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[3]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[3]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[6]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[6]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[7]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[7]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[8]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[8]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; design_7:dut|A[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; design_7:dut|A[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[0]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[0]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[10]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[10]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[11]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[11]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[12]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[12]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[13]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[13]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[14]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[14]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[15]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[15]|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[1]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[1]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[2]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[2]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[3]|datac     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[3]|datac     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[4]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[4]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[5]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[5]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[6]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[6]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[7]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[7]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[8]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[8]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; dut|A[9]|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; dut|A[9]|datad     ;
++--------+--------------+----------------+------------------+--------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'KEY[1]'                                                                       ;
++--------+--------------+----------------+------------------+--------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                       ;
++--------+--------------+----------------+------------------+--------+------------+------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[1] ; Rise       ; KEY[1]                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; KEY[1]|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; KEY[1]|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; KEY[1]~clk_delay_ctrl|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; KEY[1]~clk_delay_ctrl|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; KEY[1]~clk_delay_ctrl|clkout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; KEY[1]~clk_delay_ctrl|clkout ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; KEY[1]~clkctrl|inclk[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; KEY[1]~clkctrl|inclk[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; KEY[1]~clkctrl|outclk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; KEY[1]~clkctrl|outclk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[0]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[0]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[10]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[10]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[11]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[11]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[12]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[12]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[13]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[13]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[14]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[14]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[15]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[15]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[1]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[1]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[2]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[2]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[3]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[3]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[4]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[4]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[5]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[5]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[6]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[6]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[7]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[7]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[8]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[8]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; design_7:dut|B[9]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; design_7:dut|B[9]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[0]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[0]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[10]|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[10]|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[11]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[11]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[12]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[12]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[13]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[13]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[14]|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[14]|datac              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[15]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[15]|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[1]|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[1]|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[2]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[2]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[3]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[3]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[4]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[4]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[5]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[5]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[6]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[6]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[7]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[7]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[8]|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[8]|datac               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[1] ; Rise       ; dut|B[9]|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[1] ; Rise       ; dut|B[9]|datad               ;
++--------+--------------+----------------+------------------+--------+------------+------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 2.475  ; 2.475  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.254  ; 0.254  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.479  ; 0.479  ; Rise       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.189  ; 0.189  ; Rise       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; -0.255 ; -0.255 ; Rise       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; -0.032 ; -0.032 ; Rise       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; -0.443 ; -0.443 ; Rise       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; -0.454 ; -0.454 ; Rise       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.141  ; 0.141  ; Rise       ; KEY[0]          ;
+;  SW[8]    ; KEY[0]     ; 0.078  ; 0.078  ; Rise       ; KEY[0]          ;
+;  SW[9]    ; KEY[0]     ; 0.285  ; 0.285  ; Rise       ; KEY[0]          ;
+;  SW[10]   ; KEY[0]     ; 0.257  ; 0.257  ; Rise       ; KEY[0]          ;
+;  SW[11]   ; KEY[0]     ; 0.213  ; 0.213  ; Rise       ; KEY[0]          ;
+;  SW[12]   ; KEY[0]     ; -0.007 ; -0.007 ; Rise       ; KEY[0]          ;
+;  SW[13]   ; KEY[0]     ; 2.371  ; 2.371  ; Rise       ; KEY[0]          ;
+;  SW[14]   ; KEY[0]     ; 2.380  ; 2.380  ; Rise       ; KEY[0]          ;
+;  SW[15]   ; KEY[0]     ; 2.475  ; 2.475  ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[1]     ; 2.954  ; 2.954  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 0.602  ; 0.602  ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 0.598  ; 0.598  ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 0.376  ; 0.376  ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 0.726  ; 0.726  ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 0.598  ; 0.598  ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 0.495  ; 0.495  ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 0.592  ; 0.592  ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 0.608  ; 0.608  ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; 0.490  ; 0.490  ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; 0.827  ; 0.827  ; Rise       ; KEY[1]          ;
+;  SW[10]   ; KEY[1]     ; 0.216  ; 0.216  ; Rise       ; KEY[1]          ;
+;  SW[11]   ; KEY[1]     ; 0.522  ; 0.522  ; Rise       ; KEY[1]          ;
+;  SW[12]   ; KEY[1]     ; 0.171  ; 0.171  ; Rise       ; KEY[1]          ;
+;  SW[13]   ; KEY[1]     ; 2.954  ; 2.954  ; Rise       ; KEY[1]          ;
+;  SW[14]   ; KEY[1]     ; 2.510  ; 2.510  ; Rise       ; KEY[1]          ;
+;  SW[15]   ; KEY[1]     ; 2.819  ; 2.819  ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 0.757  ; 0.757  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.111  ; 0.111  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; -0.110 ; -0.110 ; Rise       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.185  ; 0.185  ; Rise       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 0.539  ; 0.539  ; Rise       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 0.426  ; 0.426  ; Rise       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 0.756  ; 0.756  ; Rise       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 0.757  ; 0.757  ; Rise       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.151  ; 0.151  ; Rise       ; KEY[0]          ;
+;  SW[8]    ; KEY[0]     ; 0.233  ; 0.233  ; Rise       ; KEY[0]          ;
+;  SW[9]    ; KEY[0]     ; 0.110  ; 0.110  ; Rise       ; KEY[0]          ;
+;  SW[10]   ; KEY[0]     ; 0.117  ; 0.117  ; Rise       ; KEY[0]          ;
+;  SW[11]   ; KEY[0]     ; 0.166  ; 0.166  ; Rise       ; KEY[0]          ;
+;  SW[12]   ; KEY[0]     ; 0.290  ; 0.290  ; Rise       ; KEY[0]          ;
+;  SW[13]   ; KEY[0]     ; -2.001 ; -2.001 ; Rise       ; KEY[0]          ;
+;  SW[14]   ; KEY[0]     ; -2.003 ; -2.003 ; Rise       ; KEY[0]          ;
+;  SW[15]   ; KEY[0]     ; -2.100 ; -2.100 ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[1]     ; 0.192  ; 0.192  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; -0.240 ; -0.240 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; -0.313 ; -0.313 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 0.003  ; 0.003  ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; -0.417 ; -0.417 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; -0.279 ; -0.279 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; -0.218 ; -0.218 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; -0.298 ; -0.298 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; -0.229 ; -0.229 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; -0.183 ; -0.183 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; -0.464 ; -0.464 ; Rise       ; KEY[1]          ;
+;  SW[10]   ; KEY[1]     ; 0.073  ; 0.073  ; Rise       ; KEY[1]          ;
+;  SW[11]   ; KEY[1]     ; -0.164 ; -0.164 ; Rise       ; KEY[1]          ;
+;  SW[12]   ; KEY[1]     ; 0.192  ; 0.192  ; Rise       ; KEY[1]          ;
+;  SW[13]   ; KEY[1]     ; -2.653 ; -2.653 ; Rise       ; KEY[1]          ;
+;  SW[14]   ; KEY[1]     ; -2.211 ; -2.211 ; Rise       ; KEY[1]          ;
+;  SW[15]   ; KEY[1]     ; -2.415 ; -2.415 ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; LCD_DATA[*]  ; CLOCK_50   ; 4.188 ; 4.188 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[0] ; CLOCK_50   ; 4.084 ; 4.084 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[1] ; CLOCK_50   ; 4.018 ; 4.018 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[2] ; CLOCK_50   ; 3.924 ; 3.924 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[3] ; CLOCK_50   ; 4.188 ; 4.188 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[4] ; CLOCK_50   ; 4.093 ; 4.093 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[5] ; CLOCK_50   ; 3.920 ; 3.920 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[6] ; CLOCK_50   ; 4.089 ; 4.089 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[7] ; CLOCK_50   ; 4.083 ; 4.083 ; Rise       ; CLOCK_50        ;
+; LCD_EN       ; CLOCK_50   ; 4.203 ; 4.203 ; Rise       ; CLOCK_50        ;
+; LCD_RS       ; CLOCK_50   ; 4.043 ; 4.043 ; Rise       ; CLOCK_50        ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; LCD_DATA[*]  ; CLOCK_50   ; 3.920 ; 3.920 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[0] ; CLOCK_50   ; 4.084 ; 4.084 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[1] ; CLOCK_50   ; 4.018 ; 4.018 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[2] ; CLOCK_50   ; 3.924 ; 3.924 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[3] ; CLOCK_50   ; 4.188 ; 4.188 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[4] ; CLOCK_50   ; 4.093 ; 4.093 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[5] ; CLOCK_50   ; 3.920 ; 3.920 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[6] ; CLOCK_50   ; 4.089 ; 4.089 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[7] ; CLOCK_50   ; 4.083 ; 4.083 ; Rise       ; CLOCK_50        ;
+; LCD_EN       ; CLOCK_50   ; 4.203 ; 4.203 ; Rise       ; CLOCK_50        ;
+; LCD_RS       ; CLOCK_50   ; 4.043 ; 4.043 ; Rise       ; CLOCK_50        ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -164.548  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  CLOCK_50        ; -164.548  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  KEY[0]          ; N/A       ; N/A   ; N/A      ; N/A     ; -1.222              ;
+;  KEY[1]          ; N/A       ; N/A   ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -6420.827 ; 0.0   ; 0.0      ; 0.0     ; -125.824            ;
+;  CLOCK_50        ; -6420.827 ; 0.000 ; N/A      ; N/A     ; -123.380            ;
+;  KEY[0]          ; N/A       ; N/A   ; N/A      ; N/A     ; -1.222              ;
+;  KEY[1]          ; N/A       ; N/A   ; N/A      ; N/A     ; -1.222              ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 4.428  ; 4.428  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.812  ; 0.812  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 1.191  ; 1.191  ; Rise       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.605  ; 0.605  ; Rise       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; -0.195 ; -0.195 ; Rise       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 0.133  ; 0.133  ; Rise       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; -0.443 ; -0.443 ; Rise       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; -0.454 ; -0.454 ; Rise       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.395  ; 0.395  ; Rise       ; KEY[0]          ;
+;  SW[8]    ; KEY[0]     ; 0.364  ; 0.364  ; Rise       ; KEY[0]          ;
+;  SW[9]    ; KEY[0]     ; 0.644  ; 0.644  ; Rise       ; KEY[0]          ;
+;  SW[10]   ; KEY[0]     ; 0.710  ; 0.710  ; Rise       ; KEY[0]          ;
+;  SW[11]   ; KEY[0]     ; 0.626  ; 0.626  ; Rise       ; KEY[0]          ;
+;  SW[12]   ; KEY[0]     ; 0.278  ; 0.278  ; Rise       ; KEY[0]          ;
+;  SW[13]   ; KEY[0]     ; 4.203  ; 4.203  ; Rise       ; KEY[0]          ;
+;  SW[14]   ; KEY[0]     ; 4.140  ; 4.140  ; Rise       ; KEY[0]          ;
+;  SW[15]   ; KEY[0]     ; 4.428  ; 4.428  ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[1]     ; 5.530  ; 5.530  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 1.737  ; 1.737  ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 1.644  ; 1.644  ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 1.200  ; 1.200  ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 1.741  ; 1.741  ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 1.572  ; 1.572  ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 1.444  ; 1.444  ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 1.625  ; 1.625  ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 1.683  ; 1.683  ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; 1.368  ; 1.368  ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; 2.044  ; 2.044  ; Rise       ; KEY[1]          ;
+;  SW[10]   ; KEY[1]     ; 0.900  ; 0.900  ; Rise       ; KEY[1]          ;
+;  SW[11]   ; KEY[1]     ; 1.498  ; 1.498  ; Rise       ; KEY[1]          ;
+;  SW[12]   ; KEY[1]     ; 0.843  ; 0.843  ; Rise       ; KEY[1]          ;
+;  SW[13]   ; KEY[1]     ; 5.530  ; 5.530  ; Rise       ; KEY[1]          ;
+;  SW[14]   ; KEY[1]     ; 4.543  ; 4.543  ; Rise       ; KEY[1]          ;
+;  SW[15]   ; KEY[1]     ; 5.231  ; 5.231  ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 1.347  ; 1.347  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.111  ; 0.111  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; -0.110 ; -0.110 ; Rise       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.294  ; 0.294  ; Rise       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 0.893  ; 0.893  ; Rise       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 0.786  ; 0.786  ; Rise       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 1.303  ; 1.303  ; Rise       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 1.347  ; 1.347  ; Rise       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.317  ; 0.317  ; Rise       ; KEY[0]          ;
+;  SW[8]    ; KEY[0]     ; 0.377  ; 0.377  ; Rise       ; KEY[0]          ;
+;  SW[9]    ; KEY[0]     ; 0.288  ; 0.288  ; Rise       ; KEY[0]          ;
+;  SW[10]   ; KEY[0]     ; 0.165  ; 0.165  ; Rise       ; KEY[0]          ;
+;  SW[11]   ; KEY[0]     ; 0.258  ; 0.258  ; Rise       ; KEY[0]          ;
+;  SW[12]   ; KEY[0]     ; 0.419  ; 0.419  ; Rise       ; KEY[0]          ;
+;  SW[13]   ; KEY[0]     ; -2.001 ; -2.001 ; Rise       ; KEY[0]          ;
+;  SW[14]   ; KEY[0]     ; -2.003 ; -2.003 ; Rise       ; KEY[0]          ;
+;  SW[15]   ; KEY[0]     ; -2.100 ; -2.100 ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[1]     ; 0.192  ; 0.192  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; -0.240 ; -0.240 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; -0.313 ; -0.313 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 0.003  ; 0.003  ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; -0.417 ; -0.417 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; -0.279 ; -0.279 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; -0.218 ; -0.218 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; -0.298 ; -0.298 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; -0.229 ; -0.229 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; -0.183 ; -0.183 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; -0.464 ; -0.464 ; Rise       ; KEY[1]          ;
+;  SW[10]   ; KEY[1]     ; 0.073  ; 0.073  ; Rise       ; KEY[1]          ;
+;  SW[11]   ; KEY[1]     ; -0.164 ; -0.164 ; Rise       ; KEY[1]          ;
+;  SW[12]   ; KEY[1]     ; 0.192  ; 0.192  ; Rise       ; KEY[1]          ;
+;  SW[13]   ; KEY[1]     ; -2.653 ; -2.653 ; Rise       ; KEY[1]          ;
+;  SW[14]   ; KEY[1]     ; -2.211 ; -2.211 ; Rise       ; KEY[1]          ;
+;  SW[15]   ; KEY[1]     ; -2.415 ; -2.415 ; Rise       ; KEY[1]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; LCD_DATA[*]  ; CLOCK_50   ; 7.685 ; 7.685 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[0] ; CLOCK_50   ; 7.418 ; 7.418 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[1] ; CLOCK_50   ; 7.241 ; 7.241 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[2] ; CLOCK_50   ; 7.019 ; 7.019 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[3] ; CLOCK_50   ; 7.685 ; 7.685 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[4] ; CLOCK_50   ; 7.441 ; 7.441 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[5] ; CLOCK_50   ; 7.016 ; 7.016 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[6] ; CLOCK_50   ; 7.421 ; 7.421 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[7] ; CLOCK_50   ; 7.443 ; 7.443 ; Rise       ; CLOCK_50        ;
+; LCD_EN       ; CLOCK_50   ; 7.666 ; 7.666 ; Rise       ; CLOCK_50        ;
+; LCD_RS       ; CLOCK_50   ; 7.274 ; 7.274 ; Rise       ; CLOCK_50        ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; LCD_DATA[*]  ; CLOCK_50   ; 3.920 ; 3.920 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[0] ; CLOCK_50   ; 4.084 ; 4.084 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[1] ; CLOCK_50   ; 4.018 ; 4.018 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[2] ; CLOCK_50   ; 3.924 ; 3.924 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[3] ; CLOCK_50   ; 4.188 ; 4.188 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[4] ; CLOCK_50   ; 4.093 ; 4.093 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[5] ; CLOCK_50   ; 3.920 ; 3.920 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[6] ; CLOCK_50   ; 4.089 ; 4.089 ; Rise       ; CLOCK_50        ;
+;  LCD_DATA[7] ; CLOCK_50   ; 4.083 ; 4.083 ; Rise       ; CLOCK_50        ;
+; LCD_EN       ; CLOCK_50   ; 4.203 ; 4.203 ; Rise       ; CLOCK_50        ;
+; LCD_RS       ; CLOCK_50   ; 4.043 ; 4.043 ; Rise       ; CLOCK_50        ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 124548       ; 0        ; 0        ; 0        ;
+; KEY[0]     ; CLOCK_50 ; > 2147483647 ; 0        ; 0        ; 0        ;
+; KEY[1]     ; CLOCK_50 ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 124548       ; 0        ; 0        ; 0        ;
+; KEY[0]     ; CLOCK_50 ; > 2147483647 ; 0        ; 0        ; 0        ;
+; KEY[1]     ; CLOCK_50 ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 17    ; 17   ;
+; Unconstrained Input Port Paths  ; 64    ; 64   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Apr 19 10:31:26 2023
+Info: Command: quartus_sta wrapper_7 -c wrapper_7
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 32 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'wrapper_7.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+    Info (332105): create_clock -period 1.000 -name KEY[0] KEY[0]
+    Info (332105): create_clock -period 1.000 -name KEY[1] KEY[1]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -164.548
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):  -164.548     -6420.827 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -123.380 CLOCK_50 
+    Info (332119):    -1.222        -1.222 KEY[0] 
+    Info (332119):    -1.222        -1.222 KEY[1] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -70.341
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -70.341     -2714.527 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -123.380 CLOCK_50 
+    Info (332119):    -1.222        -1.222 KEY[0] 
+    Info (332119):    -1.222        -1.222 KEY[1] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4725 megabytes
+    Info: Processing ended: Wed Apr 19 10:31:33 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:03
+
+

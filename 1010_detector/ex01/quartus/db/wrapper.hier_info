@@ -1,0 +1,20 @@
+|wrapper
+KEY[-1] => ~NO_FANOUT~
+KEY[0] => KEY[0].IN1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+LEDR[-1] <= <GND>
+LEDR[0] <= design_4:dut.z
+
+
+|wrapper|design_4:dut
+clk_i => y~1.DATAIN
+rstn => y~3.DATAIN
+w => Selector1.IN2
+w => Selector2.IN1
+w => ctn_y.S4.DATAB
+w => Selector0.IN1
+w => ctn_y.S2.DATAB
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+

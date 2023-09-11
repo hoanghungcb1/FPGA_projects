@@ -1,0 +1,5 @@
+src/bin2dec.sv
+src/binh_phuong.sv  
+src/sqrt.sv
+src/design_7.sv
+src/LCD.sv

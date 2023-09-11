@@ -1,0 +1,44 @@
+module wrapper_9(
+    input signed [7:0] M,
+    input signed [7:0] N,
+    output signed [15:0] P
+);
+	integer i;
+	reg [7:0] Mq;
+	/* verilator lint_off UNOPTFLAT */
+	reg [8:0] N1,A;
+	reg [8:0] M2,M3;
+	assign Mq = ~(M)+1;
+	assign N1 = {N,1'b0};
+	always @*
+	begin
+	A=0;
+	M2 = 0;
+	M3 = 0;
+	for (i = 0;i<8;i++)
+		begin
+			if(M[i] == 1)
+				M2 = M2 + (2<<i);
+		end
+
+	M3 = ~(M2) +1 ;
+	for (i = 0;i<4;i++)
+		begin
+			case (N1[2:0])
+				3'b000, 3'b111: A = A;
+				3'b001, 3'b010: A = A + {M[7],M};
+				3'b011		  :	A = A + M2;
+				3'b100		  :	A = A + M3;
+				3'b101, 3'b110:	A = A + {Mq[7],Mq};
+			endcase
+		N1 = {A[1:0], N1[8:2]};
+		A = {A[8], A[8], A[8:2]};
+		end
+	if(M2 == 9'b100000000)
+		begin
+		A = {2'b00,A[6:0]};
+		end
+   	end
+		assign 	P[15:8] = A[7:0];
+   	assign  P[7:0] = N1[8:1];
+endmodule
